@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+
+  db:
+    image: mongo:5.0
+    ports:
+      - 27017:27017
+    networks:
+      - backend
+    env_file: .env
+
+  api:
+    build: ./
+    ports:
+      - 5000:5000
+    volumes:
+      - ./src:/src
+    networks:
+      - frontend
+      - backend
+    env_file: .env
+
+networks:
+  frontend:
+  backend:
+
