@@ -17,6 +17,6 @@
 -  use that token inside the authorization in postman of type bearer-token value
 -  must be used in put and delete user
 -  PUT http://127.0.0.1:5000/api/users/{id}
--  body can contain name email password to update {must be logged in}
+-  body can contain body with{"name", "email", "password"} to update {must be logged in}
 -  DELETE http://127.0.0.1:5000/api/users/{id}
 -  {must be logged in}
